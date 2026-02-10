@@ -1,0 +1,206 @@
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+.nav-btn {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.nav-btn.active {
+  background: rgba(255,255,255,0.25);
+}
+
+.card {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.dark .card {
+  background: #1e293b;
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #cbd5e1;
+}
+
+.dark .input {
+  background: #334155;
+  border-color: #475569;
+  color: white;
+}
+
+/* setting,bst,delivery */
+.monitoring-card {
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* TOP SUMMARY */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-box {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 14px;
+}
+
+.summary-box .label {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.summary-box strong {
+  font-size: 1.2rem;
+}
+
+.summary-box.highlight strong {
+  color: #16a34a;
+}
+
+/* DETAIL */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.detail-box {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 14px;
+}
+
+.detail-box h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.success {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.info {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* =====================
+   ROOT THEME VARIABLES
+===================== */
+:root {
+  --bg-main: #f4f7f8;
+  --bg-card: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --accent: #10b981;
+  --border-soft: #e5e7eb;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg-main: #0f172a;
+  --bg-card: #111827;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #34d399;
+  --border-soft: #1f2937;
+}
+
+/* =====================
+   GLOBAL APPLY
+===================== */
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.card,
+.monitoring-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  transition: background 0.4s ease, border 0.4s ease;
+}
+
+/* =====================
+   TOGGLE SWITCH STYLE
+===================== */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px;
+}
+
+.toggle-label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #d1d5db, #9ca3af);
+  border-radius: 999px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Checked = Dark */
+.switch input:checked + .slider {
+  background: linear-gradient(135deg, #34d399, #059669);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Nursery</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+
+<div class="flex min-h-screen">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 bg-emerald-600/95 text-white flex flex-col">
+
+       <div class="p-4 border-b border-emerald-600">
+  <div class="flex items-center gap-3">
+    <!-- LOGO -->
+    <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden shadow">
+      <img src="assets/images/logo.png" alt="Logo" class="w-9 h-9 object-contain">
+    </div>
+
+    <!-- TEXT -->
+    <div class="leading-tight">
+      <h1 class="text-sm font-semibold">Nursery Mengkiang</h1>
+      <p class="text-xs opacity-80">PT. Finnantara Intiga</p>
+    </div>
+  </div>
+</div>
+
+   
+
+    <nav class="flex-1 p-4 space-y-2">
+      <button class="nav-btn active">Dashboard</button>
+      <button class="nav-btn">Setting</button>
+      <button class="nav-btn">Produksi BST</button>
+      <button class="nav-btn">Delivery</button>
+    </nav>
+
+
+
+  </aside>
+
+ <!-- Main Content -->
+    <main class="flex-1 p-6 overflow-y-auto">
+
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+        <div>
+  <h2 class="text-2xl font-semibold tracking-tight">
+  Laporan Daily Nursery Mengkiang
+</h2>
+
+  <p id="currentDate" class="text-sm text-slate-500 mt-1"></p>
+</div>
+
+        <div class="flex gap-2 mt-3 md:mt-0">
+          <input type="date" class="px-3 py-2 rounded border" />
+  <!-- Theme Toggle -->
+<div class="theme-toggle">
+  <span class="toggle-label"></span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider"></span>
+  </label>
+  <span class="toggle-label"></span>
+</div>
+        </div>
+      </div>
+      
+    <!-- data setting -->
+<section class="card monitoring-card">
+  <h3 class="card-title">Monitoring Setting</h3>
+
+  <!-- SUMMARY -->
+  <div class="summary-grid">
+    <div class="summary-box">
+      <p><span class="label">Target Day / Month</span></p>
+      <h4 class="text-xl font-bold">
+  30.000 <span class="text-slate-400">/ 500.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box">
+       <p><span class="label">Actual Day / Month</span></p>
+      <h4 class="text-xl font-bold">
+  30.000 <span class="text-slate-400">/ 500.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box highlight">
+      <p><span class="label">Achievement Day / Month</span></p>
+      <h4 class="text-xl font-bold">
+  86% <span class="text-slate-400">/ 23%</span>
+</h4>
+    </div>
+  </div>
+
+  <!-- DETAIL -->
+  <div class="detail-grid">
+    <div class="detail-box">
+      <h4>Actual</h4>
+      <p>EP0077AA : 10.000 Plc</p>
+      <p>EP0361WK : 20.000 Plc</p>
+      <strong>Total : 30.000 Plc</strong>
+       <p><span class="success">Achieve : 86%</span></p>
+    </div>
+
+    <div class="detail-box">
+      <h4>Kumulatif</h4>
+      <p>EP0077AA : 100.000 Plc</p>
+      <p>EP0361WK : 61.000 Plc</p>
+      <strong>Total : 161.000 Plc</strong>
+      <p><span class="info">Achieve : 23%</span></p>
+    </div>
+  </div>
+</section>
+<!-- data prod.bst -->
+<section class="card monitoring-card">
+  <h3 class="card-title">Monitoring Prod. BST</h3>
+
+  <!-- SUMMARY -->
+  <div class="summary-grid">
+    <div class="summary-box">
+      <p><span class="label">Target Day / Month</span></p>
+     <h4 class="text-xl font-bold">
+  30.000 <span class="text-slate-400">/ 500.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box">
+       <p><span class="label">Actual Day / Month</span></p>
+      <h4 class="text-xl font-bold">
+  30.000 <span class="text-slate-400">/ 500.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box highlight">
+      <p><span class="label">Achievement Day / Month</span></p>
+      <h4 class="text-xl font-bold">
+  86% <span class="text-slate-400">/ 56%</span>
+</h4>
+    </div>
+  </div>
+
+  <!-- DETAIL -->
+  <div class="detail-grid">
+    <div class="detail-box">
+      <h4>Actual</h4>
+      <p>EP0077AA : 10.000 Plc</p>
+      <p>EP0361WK : 5.000 Plc</p>
+      <strong>Total : 15.000 Plc</strong>
+       <p><span class="success">Achieve : 86%</span></p>
+    </div>
+
+    <div class="detail-box">
+      <h4>Kumulatif</h4>
+      <p>EP0077AA : 100.000 Plc</p>
+      <p>EP0361WK : 110.000 Plc</p>
+      <strong>Total : 210.000 Plc</strong>
+      <p><span class="info">Achieve : 23%</span></p>
+    </div>
+  </div>
+</section>
+
+
+<section class="card monitoring-card">
+  <h3 class="card-title">Monitoring Delivery</h3>
+
+  <!-- SUMMARY -->
+  <div class="summary-grid">
+    <div class="summary-box">
+      <p><span class="label">Target Day / Month</span></p>
+      <h4 class="text-xl font-bold">
+  30.000 <span class="text-slate-400">/ 500.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box">
+       <p><span class="label">Actual Day / Month</span></p>
+      <h4 class="text-xl font-bold">
+  30.000 <span class="text-slate-400">/ 500.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box highlight">
+      <p><span class="label">Achievement Day / Month</span></p>
+      <h4 class="text-xl font-bold">
+  66% <span class="text-slate-400">/70%</span>
+</h4>
+    </div>
+  </div>
+
+  <!-- DETAIL -->
+  <div class="detail-grid">
+    <div class="detail-box">
+      <h4>Actual</h4>
+      <p>EP0077AA : 10.000 Plc</p>
+      <p>EP0361WK : 2.000 Plc</p>
+      <strong>Total : 12.000 Plc</strong>
+       <p><span class="success">Achieve : 86%</span></p>
+    </div>
+
+    <div class="detail-box">
+      <h4>Kumulatif</h4>
+      <p>EP0077AA : 100.000 Plc</p>
+      <p>EP0361WK : 50.000 Plc</p>
+      <strong>Total : 150.000 Plc</strong>
+      <p><span class="info">Achieve : 23%</span></p>
+    </div>
+  </div>
+</section>
+
+    <!-- CHART -->
+    <section class="card">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-semibold">Grafik Target vs Actual</h3>
+
+        <div class="flex gap-2">
+          <select id="processSelect" class="input">
+            <option value="setting">Setting</option>
+            <option value="bst">Produksi BST</option>
+            <option value="delivery">Delivery</option>
+          </select>
+
+          <select id="rangeSelect" class="input">
+            <option value="day">Harian</option>
+            <option value="month">Bulanan</option>
+            <option value="year">Tahunan</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="detail-grid">
+
+      <canvas id="targetActualChart" height="100"></canvas>
+    </div>
+
+     
+    </section>
+
+
+  </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/dashboard.js"></script>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/chart.js"></script>
+<script src="assets/js/theme.js"></script>
+
+</body>
+</html>
