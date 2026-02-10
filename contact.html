@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Contact | Nursery Mengkiang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="sidebar" id="sidebar">
+    <div class="logo">
+        <img src="assets/images/logo.png" class="logo-img">
+        <div class="logo-text">
+    <span class="logo-title">Nursery Mengkiang</span>
+    <small>PT. Finnantara Intiga Sanggau</small>
+</div>
+
+    </div>
+
+    <nav class="menu">
+        <a href="index.html">Dashboard</a>
+        <a href="struktur.html">Struktur Perusahaan</a>
+        <a href="devisi.html">Devisi</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="achievement.html">Achievement</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</aside>
+
+<main class="content">
+    <div class="topbar">
+        <button class="toggle-btn" id="toggleBtn">☰</button>
+        <label class="theme-switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider-toggle"></span>
+</label>
+
+    </div>
+<section class="page contact-page">
+    <h2>Contact Us</h2>
+    <p class="contact-desc">
+        Hubungi Nursery Mengkiang melalui WhatsApp untuk respon cepat
+        atau kirim pesan resmi melalui email perusahaan.
+    </p>
+
+    <!-- WHATSAPP -->
+    <div class="contact-wa animate">
+        <h3>Hubungi via WhatsApp</h3>
+        <p>
+            Klik tombol di bawah untuk langsung mengirim pesan ke
+            WhatsApp perusahaan.
+        </p>
+
+        <a class="wa-btn"
+           href="https://wa.me/6282351607189?text=Halo%20Nursery%20Mengkiang,%20saya%20ingin%20bertanya."
+           target="_blank">
+            Chat WhatsApp
+        </a>
+    </div>
+
+    <!-- FORM EMAIL -->
+    <form class="contact-form animate"
+          action="mailto:imamsyahjr@email.com"
+          method="post"
+          enctype="text/plain">
+
+        <h3>Kirim Pesan via Email</h3>
+
+        <label>Nama</label>
+        <input type="text" name="Nama" placeholder="Nama Anda" required>
+
+        <label>Email</label>
+        <input type="email" name="Email" placeholder="Email Anda" required>
+
+        <label>Pesan</label>
+        <textarea name="Pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+
+        <button type="submit">Kirim Email</button>
+    </form>
+
+</section>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
+
+
+
