@@ -1,0 +1,465 @@
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+
+h2 {
+  margin-bottom: 30px;
+}
+
+
+:root {
+    --bg: #f6f8f6;
+    --card: #ffffff;
+    --text: #2b2b2b;
+    --muted: #6b6b6b;
+    --primary: #2f6b4f;
+    --shadow: rgba(0,0,0,0.08);
+}
+
+.card {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.dark .card {
+  background: #1e293b;
+}
+
+body.dark {
+    --bg: #837b7b;
+    --card: #1b2b23;
+    --text: #040404;
+    --muted: #b5b5b5;
+    --primary: #7bc8a4;
+    --shadow: rgba(0,0,0,0.4);
+}
+
+
+/* setting,bst,delivery */
+.monitoring-card {
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+
+/* TOP SUMMARY */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-box {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 14px;
+}
+
+.summary-box .label {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.summary-box strong {
+  font-size: 1.2rem;
+}
+
+.summary-box.highlight strong {
+  color: #16a34a;
+}
+
+/* DETAIL */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.detail-box {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 14px;
+}
+
+.detail-box h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.success {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.info {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* =====================
+   ROOT THEME VARIABLES
+===================== */
+:root {
+  --bg-main: #f4f7f8;
+  --bg-card: #ffffff;
+  --text-main: #303933;
+  --text-muted: #6b7280;
+  --accent: #10b981;
+  --border-soft: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+/* FONT GLOBAL */
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    color: var(--text);
+}
+
+/* JUDUL HALAMAN */
+.page h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--primary);
+}
+
+/* SUB JUDUL (Visi, Misi) */
+.page h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+/* PARAGRAF UMUM */
+p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+/* LIST */
+li {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* SMALL TEXT */
+small {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+/* OVERLAY */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 900;
+}
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* THEME SWITCH */
+.theme-switch {
+    position: relative;
+    width: 46px;
+    height: 24px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-toggle {
+    position: absolute;
+    inset: 0;
+    background: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider-toggle::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.theme-switch input:checked + .slider-toggle {
+    background: var(--primary);
+}
+
+.theme-switch input:checked + .slider-toggle::before {
+    transform: translateX(22px);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: var(--primary);
+    color: #fff;
+    padding: 20px;
+    transition: transform 0.35s ease;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.logo-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 4px;
+}
+.logo-text {
+    line-height: 1.2;
+}
+
+.logo-title {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap; /* PAKSA 1 BARIS */
+}
+
+
+/* MENU */
+.menu a {
+    display: block;
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+.menu a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateX(6px);
+}
+.menu a.active {
+    background: rgba(255,255,255,0.32);
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 24px 32px;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+.toggle-btn, .theme-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+    .vm-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* SLIDER */
+.slider {
+    position: relative;
+    height: 280px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        transform: translateX(-100%);
+        height: 100%;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}
+/* ORGANIZATION CHART */
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.org-card {
+    background: var(--card);
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px var(--shadow);
+    margin: 10px;
+    min-width: 180px;
+    text-align: center;
+    transition: transform 0.25s;
+}
+
+.org-card:hover {
+    transform: translateY(-4px);
+}
+
+.org-card span {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+    .struktur-image {
+        border-radius: 12px;
+        padding: 6px;
+    }
+}
+
+/* MODAL IMAGE */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 16px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 34px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.animate:nth-child(1) { animation-delay: 0.1s; }
+.animate:nth-child(2) { animation-delay: 0.2s; }
+.animate:nth-child(3) { animation-delay: 0.3s; }
+.animate:nth-child(4) { animation-delay: 0.4s; }
+.animate:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   ANIMASI
+============================== */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.9s ease forwards;
+}
+
+.animate:nth-of-type(1) { animation-delay: 0.1s; }
+.animate:nth-of-type(2) { animation-delay: 0.3s; }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* RESPONSIVE TYPOGRAPHY (HP) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .page h2 {
+        font-size: 22px;
+    }
+
+    .page h3 {
+        font-size: 16px;
+    }
+}

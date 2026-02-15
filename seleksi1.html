@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Dashboard | Nursery Mengkiang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="sidebar" id="sidebar">
+    <div class="logo">
+        <img src="assets/images/logo.png" class="logo-img">
+        <div class="logo-text">
+    <span class="logo-title">Nursery Mengkiang</span>
+    <small>PT. Finnantara Intiga Sanggau</small>
+</div>
+
+    </div>
+
+    <nav class="menu">
+        <a href="index.html" >Dashboard</a>
+        <a href="setting.html" >Input Setting</a>
+        <a href="seleksi1.html" class="active">Input Seleksi 1</a>
+        <a href="seleksi2.html">Input Seleksi 2</a>
+        <a href="seleksibst.html">Input Seleksi BST</a>
+        <a href="bst.html">Input BST</a>
+        <a href="delivery.html">Input Delivery</a>
+        <a href="tubetray.html">Input Pengiriman & Pengembalian Tube Tray</a>
+        
+    </nav>
+</aside>
+
+<main class="content">
+    <div class="topbar">
+        <button class="toggle-btn" id="toggleBtn">☰</button>
+        <label class="theme-switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider-toggle"></span>
+</label>
+
+    </div>
+
+   <!-- Main Content -->
+    <main class="flex-1 p-6 overflow-y-auto">
+
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+        <div>
+  <h2 class="text-2xl font-semibold tracking-tight">
+  Laporan Daily Nursery Mengkiang
+  <p id="currentDate" class="text-sm text-slate-500 mt-1"></p>
+</h2>
+
+          <h2><input type="date" class="px-3 py-2 rounded border" /></h2>
+  <!-- Theme Toggle -->
+<div class="theme-toggle">
+  <span class="toggle-label"></span>
+  <label class="switch">
+   
+    <span class="slider"></span>
+  </label>
+ 
+</div>
+        </div>
+      </div>
+
+      
+   <!-- Monitoring Seleksi 1 -->
+<section class="card monitoring-card">
+  <h3 class="card-title"><span>Input Seleksi 1</span></h3>
+   <!-- DETAIL -->
+
+        <p>Seleksi :  </p>
+        <p>Tgl Kegiatan :<input type="date" class="px-3 py-2 rounded border" /></p>
+        <p>Tgl Tabur : <input type="date" class="px-3 py-2 rounded border" /> </p>
+        <p>Nama :  </p>
+        <p> Clone : </p>
+        <p>Hidup : 0   Tray / 0   Btg  </p>
+        <p>Triming :0   Tray / 0   Btg </p>
+        <p>Mati : 0   Btg </p>
+        <p>Geser OA :0   Tray / 0   Btg </p>
+        <p>Geser GH :0   Tray / 0   Btg </p>
+    </div>
+    <h2><button type="submit">Simpan Data</button></h2>
+</section>
+
+
+  <!-- Data Seleksi 1 -->
+<section class="card monitoring-card">
+  <h3 class="card-title"><span>Data Seleksi 1</span></h3>
+   <!-- DETAIL -->
+        <p><div class="filter-section">
+  <div class="filter-group">
+    <label for="startDate">Dari Tanggal:</label>
+    <input type="date" id="startDate">
+  </div>
+
+  <div class="filter-group">
+    <label for="endDate">Sampai Tanggal:</label>
+    <input type="date" id="endDate">
+  </div>
+
+  <button class="btn-filter">Filter</button>
+</div>
+ </p>
+        <p>Tgl Tabur : </p>
+        <p>Nama :  </p>
+        <p> Clone : </p>
+        <p>Hidup : 0   Tray / 0   Btg  </p>
+        <p>Triming :0   Tray / 0   Btg </p>
+        <p>Mati : 0   Btg </p>
+        <p>Geser OA :0   Tray / 0   Btg </p>
+        <p>Geser GH :0   Tray / 0   Btg </p>
+    </div>
+</section>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/chart.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

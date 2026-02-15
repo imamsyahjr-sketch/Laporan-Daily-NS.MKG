@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Dashboard | Nursery Mengkiang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="sidebar" id="sidebar">
+    <div class="logo">
+        <img src="assets/images/logo.png" class="logo-img">
+        <div class="logo-text">
+    <span class="logo-title">Nursery Mengkiang</span>
+    <small>PT. Finnantara Intiga Sanggau</small>
+</div>
+
+    </div>
+
+    <nav class="menu">
+        <a href="index.html">Dashboard</a>
+        <a href="setting.html">Input Setting</a>
+        <a href="seleksi1.html">Input Seleksi 1</a>
+        <a href="seleksi2.html">Input Seleksi 2</a>
+        <a href="seleksibst.html">Input Seleksi BST</a>
+        <a href="bst.html" class="active">Input BST</a>
+        <a href="delivery.html">Input Delivery</a>
+        <a href="tubetray.html">Input Pengiriman & Pengembalian Tube Tray</a>
+        
+    </nav>
+</aside>
+
+<main class="content">
+    <div class="topbar">
+        <button class="toggle-btn" id="toggleBtn">☰</button>
+        <label class="theme-switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider-toggle"></span>
+</label>
+
+    </div>
+
+   <!-- Main Content -->
+    <main class="flex-1 p-6 overflow-y-auto">
+
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+        <div>
+  <h2 class="text-2xl font-semibold tracking-tight">
+  Laporan Daily Nursery Mengkiang
+   <p id="currentDate" class="text-sm text-slate-500 mt-1"></p>
+</h2>
+
+          <h2><input type="date" class="px-3 py-2 rounded border" /></h2>
+  <!-- Theme Toggle -->
+<div class="theme-toggle">
+  <span class="toggle-label"></span>
+  <label class="switch">
+   
+    <span class="slider"></span>
+  </label>
+ 
+</div>
+        </div>
+      </div>
+      
+  <!-- Monitoring Setting -->
+<section class="card monitoring-card">
+  <h3 class="card-title"><span>Stok BST PASS NAT</span></h3>
+
+  <!-- SUMMARY -->
+  <div class="summary-grid">
+    <div class="summary-box">
+      <p><span class="label">EP0077AA</span></p>
+      <h4><span class="text-slate-400">120.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box">
+       <p><span class="label">EP0361WK</span></p>
+      <h4><span class="text-slate-400">20.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box highlight">
+      <p><span class="label">Total Stok BST</span></p>
+      <h4><span class="text-slate-400">140.000</span>
+</h4>
+    </div>
+  </div>
+
+  <!-- DETAIL -->
+  <div class="detail-grid">
+    <div class="detail-box">
+      <h4>PASS NAT</h4>
+      <p>Tgl Kegiatan :<input type="date" class="px-3 py-2 rounded border" /></p>
+      <strong>EP0077AA : </strong>
+        <p>10.000 Plc</p>
+      <strong>EP0361WK : </strong>
+        <p>5.000 Plc</p>
+      <strong>Total : 15.000 Plc</strong>
+    </div>
+
+    <div class="detail-box">
+      <h4>FAIL NAT</h4>
+      <p>Tgl Kegiatan :<input type="date" class="px-3 py-2 rounded border" /></p>
+       <strong>EP0077AA : </strong>
+         <p>5.000 Plc</p>
+      <strong>EP0361WK : </strong>
+        <p> 0 Plc</p>
+      <strong>Total : 5.000 Plc</strong>
+    </div>
+  </div>
+</section>
+  <!-- Monitoring ail -->
+<section class="card monitoring-card">
+
+   <h3 class="card-title"><span>Bibit Fail NAT</span></h3>
+
+  <!-- SUMMARY -->
+  <div class="summary-grid">
+    <div class="summary-box">
+      <p><span class="label">EP0077AA (Day / Month)</span></p>
+      <h4 class="text-xl font-bold">
+  5.000 <span class="text-slate-400">/ 15.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box">
+       <p><span class="label">EP0361WK (Day / Month)</span></p>
+      <h4 class="text-xl font-bold">
+  10.000 <span class="text-slate-400">/ 10.000</span>
+</h4>
+    </div>
+
+    <div class="summary-box highlight">
+      <p><span class="label">Total Fail (Month)</span></p>
+      <h4><span class="text-slate-400">25.000</span>
+</h4>
+    </div>
+  </div>
+
+</section>
+
+  <!-- Monitoring BST H-1 -->
+<section class="card monitoring-card">
+  <h3 class="card-title"><span>Kemampuan BST OA H-1</span></h3>
+
+  
+  <!-- DETAIL -->
+  <div class="detail-grid">
+    <div class="detail-box">
+      <h4>Input Kemampuan BST OA H-1</h4>
+      <strong>EP0077AA : </strong>
+        <p>10.000 Plc</p>
+      <strong>EP0361WK : </strong>
+        <p>5.000 Plc</p>
+      <strong>Total : 15.000 Plc</strong>
+    </div>
+  </div>
+</section>
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/chart.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
